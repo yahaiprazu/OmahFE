@@ -1,0 +1,1 @@
+penunggaan AI untuk pembuatan kode" vanilla html yang dikonversi dari file next.js yang saya bikin sebelumnya, untuk penggunaan AI untuk next.js nya untuk pembuatan slide pada portofolio dan perubahan di testimonials, serta perapihan alur kode.
