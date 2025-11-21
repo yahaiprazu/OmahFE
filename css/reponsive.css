@@ -1,0 +1,236 @@
+/* Mobile First Responsive Design */
+
+/* Small devices (phones, 640px and down) */
+@media (max-width: 640px) {
+    /* Navigation */
+    .nav-menu,
+    .nav-auth {
+        display: none;
+    }
+    
+    .nav-menu.active,
+    .nav-auth.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--bg-dark);
+        border-top: 1px solid var(--border-color);
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    .nav-toggle {
+        display: flex;
+    }
+    
+    .nav-toggle.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .nav-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .nav-toggle.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    /* Home Page */
+    .home-title {
+        font-size: 2.5rem;
+    }
+    
+    .home-subtitle {
+        font-size: 1.25rem;
+    }
+    
+    .home-buttons {
+        flex-direction: column;
+    }
+    
+    .mirror-photo {
+        width: 300px;
+        height: 200px;
+    }
+
+    /* About Page */
+    .about-title {
+        font-size: 2rem;
+    }
+    
+    .about-stats {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .about-photo {
+        width: 250px;
+        height: 180px;
+    }
+
+    /* Portfolio Page */
+    .portfolio-title {
+        font-size: 2rem;
+    }
+    
+    .portfolio-buttons {
+        flex-direction: column;
+    }
+    
+    .gallery-item {
+        width: 280px;
+        height: 220px;
+    }
+
+    /* Contact Page */
+    .contact-title {
+        font-size: 2.5rem;
+    }
+
+    /* Testimonials Page */
+    .testimonials-title {
+        font-size: 2rem;
+    }
+    
+    .card-left {
+        padding: 2rem 1rem;
+    }
+    
+    .testimonial-quote {
+        font-size: 1.25rem;
+    }
+
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+/* Medium devices (tablets, 768px and down) */
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 0 1rem;
+    }
+    
+    .home-content {
+        padding: 6rem 1rem 2rem;
+    }
+    
+    .about-container {
+        padding: 6rem 1rem 2rem;
+    }
+    
+    .portfolio-container {
+        padding: 2rem 1rem;
+    }
+    
+    .contact-container {
+        padding: 2rem 1rem;
+    }
+    
+    .testimonials-container {
+        padding: 2rem 1rem;
+    }
+}
+
+/* Large devices (desktops, 1024px and down) */
+@media (max-width: 1024px) {
+    .slider-nav {
+        position: static;
+        margin-bottom: 1rem;
+    }
+    
+    .testimonial-card {
+        margin: 0 1rem;
+    }
+}
+
+/* Utility Classes for Responsive Design */
+.hidden-mobile {
+    display: none;
+}
+
+@media (min-width: 641px) {
+    .hidden-mobile {
+        display: block;
+    }
+    
+    .hidden-desktop {
+        display: none;
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Focus Styles for Accessibility */
+button:focus,
+a:focus,
+input:focus,
+textarea:focus {
+    outline: 2px solid var(--accent-orange);
+    outline-offset: 2px;
+}
+
+/* Loading States */
+.btn-loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* Animation Classes */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.5s ease-out;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in-right {
+    animation: slideInRight 0.5s ease-out;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

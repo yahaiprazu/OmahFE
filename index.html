@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OmahFE - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque&display=swap" rel="stylesheet">
+    <style>
+        /* Additional styles untuk home page */
+        .main-home {
+            min-height: 100vh;
+            padding-top: 80px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Background Photo di pojok kiri */
+        .bg-photo-left {
+            position: absolute;
+            top: 50px;
+            left: 0;
+            width: 400px;
+            height: 300px;
+            z-index: 0;
+            opacity: 0.6;
+        }
+        
+        .bg-photo-left img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0 1rem 1rem 0;
+        }
+        
+        .home-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            position: relative;
+            z-index: 10;
+        }
+        
+        /* Desktop layout */
+        @media (min-width: 1024px) {
+            .home-wrapper {
+                flex-direction: row;
+                align-items: center;
+                gap: 4rem;
+            }
+            
+            .home-content {
+                flex: 1;
+            }
+            
+            .home-image-section {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+            }
+        }
+        
+        .home-image-section {
+            order: 2;
+        }
+        
+        .home-content {
+            order: 1;
+        }
+        
+        @media (min-width: 1024px) {
+            .home-image-section {
+                order: 1;
+            }
+            
+            .home-content {
+                order: 0;
+            }
+        }
+        
+        .additional-photo {
+            width: 100%;
+            max-width: 400px;
+            height: 300px;
+            border-radius: 1rem;
+            object-fit: cover;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        .divider {
+            width: 100px;
+            height: 2px;
+            background: var(--accent-orange);
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-link">
+                    <span class="logo-omah">Omah</span>
+                    <span class="logo-fe">FE</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="about.html" class="nav-link">About</a>
+                <a href="features.html" class="nav-link">Features</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="testimonials.html" class="nav-link">Testimonials</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="nav-auth">
+                <button class="btn-signin">Sign In</button>
+                <button class="btn-signup">Sign Up</button>
+            </div>
+            
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-home">
+        <!-- Background Photo di pojok kiri -->
+        <div class="bg-photo-left">
+            <img src="images/rectangle-19.png" alt="Background Decoration">
+        </div>
+
+        <div class="home-wrapper">
+            <!-- Text Content -->
+            <div class="home-content">
+                <div class="content-bubble">
+                    <img src="images/icons/laptop.svg" alt="Laptop" class="bubble-icon">
+                    <span class="bubble-text">Open for project</span>
+                </div>
+
+                <h2 class="home-subtitle">Get Insights on</h2>
+                
+                <h1 class="home-title">
+                    <span class="title-omah">Omah</span>
+                    <span class="title-fe">FE</span>
+                </h1>
+
+                <p class="home-description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+
+                <div class="divider"></div>
+
+                <div class="home-buttons">
+                    <a href="about.html" class="btn-getstarted">Get Started</a>
+                    <a href="portfolio.html" class="btn-moreanalytics">More Analytics...</a>
+                </div>
+            </div>
+
+            <!-- Photo Section -->
+            <div class="home-image-section">
+                <img src="images/blablabla.jpeg" alt="OmahFE Project" class="additional-photo">
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="images/omahfe.png" alt="OmahFE Logo" class="footer-logo">
+                <p class="footer-address">
+                    Gedung Fakultas MIPA UGM Sekip Utara, Bulaksumur, Sinduadi, Mlati, Sleman, Di Yogyakarta
+                </p>
+                <div class="footer-social">
+                    <h3 class="social-title">Connect with Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><img src="images/icons/instagram.svg" alt="Instagram"></a>
+                        <a href="#"><img src="images/icons/facebook.svg" alt="Facebook"></a>
+                        <a href="#"><img src="images/icons/twitter.svg" alt="Twitter"></a>
+                        <a href="#"><img src="images/icons/linkedin.svg" alt="LinkedIn"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h3 class="footer-heading">Page</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="features.html">Our Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-heading">Support</h3>
+                    <ul>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; OmahFE 2025</p>
+        </div>
+    </footer>
+
+    <script src="js/navigation.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
